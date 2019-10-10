@@ -164,7 +164,7 @@ public class AvatarDriveActivity extends FUBaseActivity implements FURenderer.On
     }
 
     public void showDrivePage() {
-        mFURenderer.unloadAvatarBackground();
+        //mFURenderer.unloadAvatarBackground();
         mFURenderer.setAvatarTranslate(NORMAL_XYZ);
         mFURenderer.setAvatarHairTranslate(NORMAL_XYZ);
         mFURenderer.setAvatarScale(AvatarMakeFragment.NORMAL_SCALE);
@@ -294,7 +294,7 @@ public class AvatarDriveActivity extends FUBaseActivity implements FURenderer.On
     @Override
     public void onBundleLoadComplete(int what) {
         Log.d(TAG, "onBundleLoadComplete() called with: what = [" + what + "]");
-        if (what == FURenderer.ITEM_ARRAYS_EFFECT_INDEX) {
+        if (what == FURenderer.ITEM_ARRAYS_EFFECT_INDEX_1) {
             runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
@@ -456,7 +456,7 @@ public class AvatarDriveActivity extends FUBaseActivity implements FURenderer.On
                     if (isCreate) {
                         mFURenderer.clearFaceShape();
                     }
-                    mFURenderer.loadAvatarBackground();
+                    //mFURenderer.loadAvatarBackground();
                     if (!mFURenderer.isAvatarLoaded()) {
                         mFURenderer.onEffectSelected(EffectEnum.AVATAR_HEAD.effect());
                     }

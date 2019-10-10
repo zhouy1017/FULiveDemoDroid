@@ -166,19 +166,19 @@ public class BeautifyBodyControlView extends FrameLayout {
     private void setBodyParam(int checkedId, float intensity) {
         switch (checkedId) {
             case R.id.beauty_box_body_slim:
-                mOnFUControlListener.setBodySlimIntensity(intensity);
+                //mOnFUControlListener.setBodySlimIntensity(intensity);
                 break;
             case R.id.beauty_box_long_leg:
-                mOnFUControlListener.setLegSlimIntensity(intensity);
+                //mOnFUControlListener.setLegSlimIntensity(intensity);
                 break;
             case R.id.beauty_box_thin_waist:
-                mOnFUControlListener.setWaistSlimIntensity(intensity);
+                //mOnFUControlListener.setWaistSlimIntensity(intensity);
                 break;
             case R.id.beauty_box_beauty_shoulder:
-                mOnFUControlListener.setShoulderSlimIntensity(intensity + 0.5f);
+                //mOnFUControlListener.setShoulderSlimIntensity(intensity + 0.5f);
                 break;
             case R.id.beauty_box_hip_slim:
-                mOnFUControlListener.setHipSlimIntensity(intensity);
+                //.setHipSlimIntensity(intensity);
                 break;
             default:
         }

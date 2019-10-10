@@ -142,7 +142,7 @@ public class ShowPhotoActivity extends AppCompatActivity implements PhotoRendere
                 .inputTextureType(0)
                 .inputImageOrientation(360)
                 .inputIsImage(1)
-                .setUseBeautifyBody(selectEffectType == Effect.EFFECT_TYPE_BEAUTY_BODY)
+                //.setUseBeautifyBody(selectEffectType == Effect.EFFECT_TYPE_BEAUTY_BODY)
                 .setNeedBeautyHair(selectEffectType == Effect.EFFECT_TYPE_HAIR_GRADIENT)
                 .setCurrentCameraType(Camera.CameraInfo.CAMERA_FACING_BACK)
                 .setOnTrackingStatusChangedListener(this)

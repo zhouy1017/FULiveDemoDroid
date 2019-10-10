@@ -40,7 +40,7 @@ public class FUAnimojiActivity extends FUBaseActivity {
     protected FURenderer initFURenderer() {
         return new FURenderer
                 .Builder(this)
-                .maxFaces(4)
+                .maxFaces(6)
                 .inputTextureType(FURenderer.FU_ADM_FLAG_EXTERNAL_OES_TEXTURE)
                 .setOnFUDebugListener(this)
                 .setNeedAnimoji3D(true)

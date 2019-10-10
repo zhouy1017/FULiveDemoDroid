@@ -117,7 +117,7 @@ public class LivePhotoDriveActivity extends FUBaseActivity {
                 }
                 mAdapter.setItemSelected(lastPosition);
                 mRecyclerView.scrollToPosition(lastPosition);
-                mFURenderer.setLivePhoto(livePhoto);
+                //mFURenderer.setLivePhoto(livePhoto);
             }
         });
     }
@@ -276,7 +276,7 @@ public class LivePhotoDriveActivity extends FUBaseActivity {
                 }
                 mLastPosition = position;
                 LivePhoto livePhoto = adapter.getItem(position);
-                mFURenderer.setLivePhoto(livePhoto);
+                //mFURenderer//.setLivePhoto(livePhoto);
             }
         }
     }

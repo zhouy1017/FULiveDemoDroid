@@ -71,7 +71,7 @@ public interface OnFUControlListener {
      *
      * @param blurType 0 清晰磨皮，1 重度磨皮，2 精细磨皮
      */
-    void onBlurTypeSelected(float blurType);
+    //void onBlurTypeSelected(float blurType);
 
     /**
      * 磨皮程度
@@ -141,21 +141,21 @@ public interface OnFUControlListener {
      *
      * @param level
      */
-    void onCheekNarrowSelected(float level);
+    //void onCheekNarrowSelected(float level);
 
     /**
      * 小脸选择
      *
      * @param level
      */
-    void onCheekSmallSelected(float level);
+    //void onCheekSmallSelected(float level);
 
     /**
      * V脸选择
      *
      * @param level
      */
-    void onCheekVSelected(float level);
+    //void onCheekVSelected(float level);
 
     /**
      * 切换海报模板
@@ -189,21 +189,21 @@ public interface OnFUControlListener {
      *
      * @param makeupItems
      */
-    void onLightMakeupBatchSelected(List<MakeupItem> makeupItems);
+    //void onLightMakeupBatchSelected(List<MakeupItem> makeupItems);
 
     /**
      * 妆容总体调节（轻美妆，质感美颜）
      *
      * @param level
      */
-    void onLightMakeupOverallLevelChanged(float level);
+    //void onLightMakeupOverallLevelChanged(float level);
 
     /**
      * 设置表情动图的点位和图像数据，用来驱动图像
      *
      * @param livePhoto
      */
-    void setLivePhoto(LivePhoto livePhoto);
+    //void setLivePhoto(LivePhoto livePhoto);
 
     /**
      * 选择美妆妆容
@@ -211,7 +211,7 @@ public interface OnFUControlListener {
      * @param paramMap
      * @param removePrevious
      */
-    void selectMakeupItem(Map<String, Object> paramMap, boolean removePrevious);
+    //void selectMakeupItem(Map<String, Object> paramMap, boolean removePrevious);
 
     /**
      * 调节美妆妆容强度
@@ -219,7 +219,7 @@ public interface OnFUControlListener {
      * @param name
      * @param density
      */
-    void setMakeupItemIntensity(String name, double density);
+    //void setMakeupItemIntensity(String name, double density);
 
     /**
      * 设置美妆妆容颜色
@@ -227,40 +227,6 @@ public interface OnFUControlListener {
      * @param name
      * @param colors RGBA color
      */
-    void setMakeupItemColor(String name, double[] colors);
+    //void setMakeupItemColor(String name, double[] colors);
 
-    /**
-     * 设置瘦身程度
-     *
-     * @param intensity
-     */
-    void setBodySlimIntensity(float intensity);
-
-    /**
-     * 设置长腿程度
-     *
-     * @param intensity
-     */
-    void setLegSlimIntensity(float intensity);
-
-    /**
-     * 设置细腰程度
-     *
-     * @param intensity
-     */
-    void setWaistSlimIntensity(float intensity);
-
-    /**
-     * 设置美肩程度
-     *
-     * @param intensity
-     */
-    void setShoulderSlimIntensity(float intensity);
-
-    /**
-     * 设置美臀程度
-     *
-     * @param intensity
-     */
-    void setHipSlimIntensity(float intensity);
 }

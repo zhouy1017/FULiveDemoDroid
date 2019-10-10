@@ -39,7 +39,7 @@ public class BeautifyBodyActivity extends FUBaseActivity {
         return new FURenderer
                 .Builder(this)
                 .maxFaces(1)
-                .setUseBeautifyBody(true)
+                //.setUseBeautifyBody(true)
                 .inputTextureType(FURenderer.FU_ADM_FLAG_EXTERNAL_OES_TEXTURE)
                 .setOnFUDebugListener(this)
                 .setOnTrackingStatusChangedListener(this)

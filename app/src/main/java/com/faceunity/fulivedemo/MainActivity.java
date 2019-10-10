@@ -17,7 +17,6 @@ import android.widget.TextView;
 import com.faceunity.FURenderer;
 import com.faceunity.entity.Effect;
 import com.faceunity.fulivedemo.activity.AvatarDriveActivity;
-import com.faceunity.fulivedemo.activity.BeautifyBodyActivity;
 import com.faceunity.fulivedemo.activity.FUAnimojiActivity;
 import com.faceunity.fulivedemo.activity.FUBeautyActivity;
 import com.faceunity.fulivedemo.activity.FUEffectActivity;
@@ -44,7 +43,6 @@ public class MainActivity extends AppCompatActivity {
             Effect.EFFECT_TYPE_NONE,
             Effect.EFFECT_TYPE_NORMAL,
             Effect.EFFECT_TYPE_ANIMOJI,
-            Effect.EFFECT_TYPE_BEAUTY_BODY,
             Effect.EFFECT_TYPE_NONE,
             Effect.EFFECT_TYPE_AR,
             Effect.EFFECT_TYPE_FACE_CHANGE,
@@ -65,7 +63,6 @@ public class MainActivity extends AppCompatActivity {
             "524288-0",                //美妆
             "6-0",              //道具贴纸
             "16-0",                   //Animoji
-            "0-32",              // 美体
             "1048576-0",               //美发
             "96-0",            //AR面具
             "128-0",                   //换脸
@@ -85,7 +82,6 @@ public class MainActivity extends AppCompatActivity {
             R.string.home_function_name_makeup,
             R.string.home_function_name_normal,
             R.string.home_function_name_animoji,
-            R.string.home_function_name_beauty_body,
             R.string.home_function_name_hair,
             R.string.home_function_name_ar,
             R.string.home_function_name_face_change,
@@ -105,7 +101,6 @@ public class MainActivity extends AppCompatActivity {
             R.drawable.main_makeup,
             R.drawable.main_effect,
             R.drawable.main_animoji,
-            R.drawable.demo_icon_body,
             R.drawable.main_hair,
             R.drawable.main_ar_mask,
             R.drawable.main_change_face,
@@ -169,6 +164,9 @@ public class MainActivity extends AppCompatActivity {
         HomeRecyclerAdapter homeRecyclerAdapter = new HomeRecyclerAdapter();
         mRecyclerView.setAdapter(homeRecyclerAdapter);
         ((SimpleItemAnimator) mRecyclerView.getItemAnimator()).setSupportsChangeAnimations(false);
+        Intent intent;
+        intent = new Intent(MainActivity.this, FUAnimojiActivity.class);
+        startActivity(intent);
     }
 
     class HomeRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
@@ -231,9 +229,6 @@ public class MainActivity extends AppCompatActivity {
                             startActivity(intent);
                         } else if (home_function_res[position] == R.drawable.main_avatar) {
                             intent = new Intent(MainActivity.this, AvatarDriveActivity.class);
-                            startActivity(intent);
-                        } else if (home_function_res[position] == R.drawable.demo_icon_body) {
-                            intent = new Intent(MainActivity.this, BeautifyBodyActivity.class);
                             startActivity(intent);
                         } else {
                             intent = new Intent(MainActivity.this, FUEffectActivity.class);

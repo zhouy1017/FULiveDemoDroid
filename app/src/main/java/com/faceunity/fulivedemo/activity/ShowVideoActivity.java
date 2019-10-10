@@ -132,7 +132,7 @@ public class ShowVideoActivity extends AppCompatActivity implements VideoRendere
                 .Builder(this)
                 .inputTextureType(FURenderer.FU_ADM_FLAG_EXTERNAL_OES_TEXTURE)
                 .setNeedBeautyHair(selectEffectType == Effect.EFFECT_TYPE_HAIR_GRADIENT)
-                .setUseBeautifyBody(selectEffectType == Effect.EFFECT_TYPE_BEAUTY_BODY)
+                //.setUseBeautifyBody(selectEffectType == Effect.EFFECT_TYPE_BEAUTY_BODY)
                 .setCurrentCameraType(Camera.CameraInfo.CAMERA_FACING_BACK)
                 .inputImageOrientation(90)
                 .build();

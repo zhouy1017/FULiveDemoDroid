@@ -156,7 +156,7 @@ public class MakeupControlView extends FrameLayout {
                     for (Map.Entry<String, Object> entry : entries) {
                         String key = entry.getKey();
                         if (key.startsWith(MakeupParamHelper.MakeupParam.MAKEUP_INTENSITY_PREFIX)) {
-                            mOnFUControlListener.setMakeupItemIntensity(key, intensity * ((Double) entry.getValue()));
+                            //mOnFUControlListener.setMakeupItemIntensity(key, intensity * ((Double) entry.getValue()));
                         }
                     }
                 } else {
@@ -164,7 +164,7 @@ public class MakeupControlView extends FrameLayout {
                     for (int i = 0; i < mSelectedItems.size(); i++) {
                         SelectedMakeupItem selectedMakeupItem = mSelectedItems.valueAt(i);
                         NewMakeupItem makeupItem = selectedMakeupItem.makeupItem;
-                        mOnFUControlListener.setMakeupItemIntensity(makeupItem.getIntensityName(), intensity);
+                        //mOnFUControlListener.setMakeupItemIntensity(makeupItem.getIntensityName(), intensity);
                         mSelectedCombinationIntensitys.put(R.string.makeup_customize, intensity);
                     }
                 }
@@ -219,7 +219,7 @@ public class MakeupControlView extends FrameLayout {
                         int titlePos = mSubTitleAdapter.getSelectedIndex();
                         String key = "" + titlePos + selectedIndex;
                         mSelectedItemIntensitys.put(key, level);
-                        mOnFUControlListener.setMakeupItemIntensity(makeupItem.getIntensityName(), level);
+                        //mOnFUControlListener.setMakeupItemIntensity(makeupItem.getIntensityName(), level);
                     }
                 }
             }
@@ -287,7 +287,7 @@ public class MakeupControlView extends FrameLayout {
                         if (pos >= 0) {
                             String key = "" + mSubTitleAdapter.getSelectedIndex() + pos;
                             mSelectedColors.put(key, new SelectedMakeupItem(position, makeupItem));
-                            mOnFUControlListener.setMakeupItemColor(colorName, colors);
+                            //mOnFUControlListener.setMakeupItemColor(colorName, colors);
                         }
                     }
                 }
@@ -382,7 +382,7 @@ public class MakeupControlView extends FrameLayout {
                 mMakeupItemSeekBar.setProgress((int) (intensity * 100));
                 mSubTitleAdapter.setPositionHighlight(position > 0 && intensity > 0);
                 if (makeupItem != null && position > 0) {
-                    mOnFUControlListener.setMakeupItemIntensity(makeupItem.getIntensityName(), intensity);
+                    //mOnFUControlListener.setMakeupItemIntensity(makeupItem.getIntensityName(), intensity);
                 }
             }
         }
@@ -478,7 +478,7 @@ public class MakeupControlView extends FrameLayout {
                 mMakeupCombinationSeekBar.setVisibility(View.VISIBLE);
                 double intensity = mSelectedCombinationIntensitys.get(makeupCombination.getNameId(), 1.0);
                 mMakeupCombinationSeekBar.setProgress((int) (intensity * 100));
-                mOnFUControlListener.selectMakeupItem(makeupCombination.getParamMap(), false);
+                //mOnFUControlListener.selectMakeupItem(makeupCombination.getParamMap(), false);
             }
         });
     }
@@ -784,7 +784,7 @@ public class MakeupControlView extends FrameLayout {
                 setColorListVisible(false);
                 mMakeupItemSeekBar.setVisibility(View.INVISIBLE);
                 mSubTitleAdapter.setPositionHighlight(false);
-                mOnFUControlListener.selectMakeupItem(makeupItem.getParamMap(), false);
+                //mOnFUControlListener.selectMakeupItem(makeupItem.getParamMap(), false);
             } else {
                 int titlePos = mSubTitleAdapter.getSelectedIndex();
                 String key = "" + titlePos + position;
@@ -796,7 +796,7 @@ public class MakeupControlView extends FrameLayout {
                     // 粉底没有颜色滑条
                     setColorListVisible(false);
                     List<double[]> colorList = makeupItem.getColorList();
-                    mOnFUControlListener.setMakeupItemColor(makeupItem.getColorName(), colorList.get(position + 2));
+                    //mOnFUControlListener.setMakeupItemColor(makeupItem.getColorName(), colorList.get(position + 2));
                 } else {
                     // 其他带有颜色滑条
                     List<double[]> colorList = makeupItem.getColorList();
@@ -815,12 +815,12 @@ public class MakeupControlView extends FrameLayout {
                             mSelectedColors.put(key, selectedMakeupItem);
                         }
                         mPathLayoutManager.smoothScrollToPosition(selectedMakeupItem.position);
-                        mOnFUControlListener.setMakeupItemColor(makeupItem.getColorName(), colorList.get(selectedMakeupItem.position));
+                        //mOnFUControlListener.setMakeupItemColor(makeupItem.getColorName(), colorList.get(selectedMakeupItem.position));
                     } else {
                         setColorListVisible(false);
                     }
                 }
-                mOnFUControlListener.selectMakeupItem(makeupItem.getParamMap(), false);
+                //mOnFUControlListener.selectMakeupItem(makeupItem.getParamMap(), false);
                 double level;
                 if (mSelectedItemIntensitys.containsKey(key)) {
                     level = mSelectedItemIntensitys.get(key);
@@ -830,7 +830,7 @@ public class MakeupControlView extends FrameLayout {
                     mSelectedItemIntensitys.put(key, level);
                 }
                 mMakeupItemSeekBar.setProgress((int) (level * 100));
-                mOnFUControlListener.setMakeupItemIntensity(makeupItem.getIntensityName(), level);
+                //mOnFUControlListener.setMakeupItemIntensity(makeupItem.getIntensityName(), level);
                 mSubTitleAdapter.setPositionHighlight(level > 0);
             }
             SelectedMakeupItem selectedMakeupItem = new SelectedMakeupItem(position, makeupItem);
@@ -860,7 +860,7 @@ public class MakeupControlView extends FrameLayout {
                 // 卸妆
                 setCustomEnable(true);
                 mMakeupCombinationSeekBar.setVisibility(View.INVISIBLE);
-                mOnFUControlListener.selectMakeupItem(makeupCombination.getParamMap(), true);
+                //mOnFUControlListener.selectMakeupItem(makeupCombination.getParamMap(), true);
                 clearSelectedItems();
             } else {
                 // 预置妆容：5个日常妆，5个主题妆。日常妆支持自定义，主题妆不支持
@@ -882,7 +882,7 @@ public class MakeupControlView extends FrameLayout {
                         paramMapCopy.put(key, v);
                     }
                 }
-                mOnFUControlListener.selectMakeupItem(paramMapCopy, true);
+                //mOnFUControlListener.selectMakeupItem(paramMapCopy, true);
                 setIsFlipPoints(makeupCombination);
             }
         }

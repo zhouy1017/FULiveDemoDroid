@@ -200,7 +200,7 @@ public class BeautyControlView extends FrameLayout {
                 ToastUtil.showNormalToast(mContext, desc);
                 checkFaceSkinChanged();
                 ((BeautyBox) findViewById(R.id.beauty_box_blur_level)).setOpen(isOpen(checkedId));
-                mOnFUControlListener.onBlurTypeSelected(type);
+                //mOnFUControlListener.onBlurTypeSelected(type);
                 mOnFUControlListener.onBlurLevelSelected(getValue(checkedId));
             }
         });
@@ -385,7 +385,7 @@ public class BeautyControlView extends FrameLayout {
             case R.id.rb_blur_clear:
             case R.id.rb_blur_fine:
             case R.id.rb_blur_hazy:
-                mOnFUControlListener.onBlurTypeSelected(BeautyParameterModel.sBlurType);
+                //mOnFUControlListener.onBlurTypeSelected(BeautyParameterModel.sBlurType);
                 break;
             case R.id.beauty_box_color_level:
                 mOnFUControlListener.onColorLevelSelected(getValue(viewId));
@@ -406,13 +406,13 @@ public class BeautyControlView extends FrameLayout {
                 mOnFUControlListener.onCheekThinningSelected(getValue(viewId));
                 break;
             case R.id.beauty_box_cheek_narrow:
-                mOnFUControlListener.onCheekNarrowSelected(getValue(viewId));
+                //mOnFUControlListener.onCheekNarrowSelected(getValue(viewId));
                 break;
             case R.id.beauty_box_cheek_v:
-                mOnFUControlListener.onCheekVSelected(getValue(viewId));
+                //mOnFUControlListener.onCheekVSelected(getValue(viewId));
                 break;
             case R.id.beauty_box_cheek_small:
-                mOnFUControlListener.onCheekSmallSelected(getValue(viewId));
+                //mOnFUControlListener.onCheekSmallSelected(getValue(viewId));
                 break;
             case R.id.beauty_box_intensity_chin:
                 mOnFUControlListener.onIntensityChinSelected(getValue(viewId));
@@ -477,7 +477,7 @@ public class BeautyControlView extends FrameLayout {
                             makeupItem.setLevel(lev);
                         }
                     }
-                    mOnFUControlListener.onLightMakeupOverallLevelChanged(level);
+                    //mOnFUControlListener.onLightMakeupOverallLevelChanged(level);
                     mOnFUControlListener.onFilterLevelSelected(level);
                 }
             }
@@ -744,7 +744,7 @@ public class BeautyControlView extends FrameLayout {
                 int old = mFilterPositionSelect;
                 mFilterPositionSelect = -1;
                 mFilterRecyclerAdapter.notifyItemChanged(old);
-                mOnFUControlListener.onLightMakeupBatchSelected(faceMakeup.getMakeupItems());
+                //mOnFUControlListener.onLightMakeupBatchSelected(faceMakeup.getMakeupItems());
             } else {
                 // 效果妆容
                 mBeautySeekBar.setVisibility(View.VISIBLE);
@@ -757,8 +757,8 @@ public class BeautyControlView extends FrameLayout {
                     BeautyParameterModel.sBatchMakeupLevel.put(name, level);
                 }
                 seekToSeekBar(level);
-                mOnFUControlListener.onLightMakeupBatchSelected(faceMakeup.getMakeupItems());
-                mOnFUControlListener.onLightMakeupOverallLevelChanged(level);
+                //mOnFUControlListener.onLightMakeupBatchSelected(faceMakeup.getMakeupItems());
+                //mOnFUControlListener.onLightMakeupOverallLevelChanged(level);
 
                 Pair<Filter, Float> filterFloatPair = FaceMakeupEnum.MAKEUP_FILTERS.get(faceMakeup.getNameId());
                 if (filterFloatPair != null) {
